@@ -228,23 +228,53 @@
 //   if (i === 100) break;
 // }
 
-let maximum = parseInt(prompt('Enter the maximum number'))
-while(!maximum){
-    maximum = parseInt(prompt('Enter a valid number!'))
-}
-const randomNumber = Math.random();
-console.log("randomNumber",randomNumber)
-const targetnum = Math.floor(randomNumber * maximum) + 1;
-console.log(targetnum);
+// let maximum = parseInt(prompt('Enter the maximum number'))
+// while(!maximum){
+//     maximum = parseInt(prompt('Enter a valid number!'))
+// }
 
-let guess = parseInt(prompt("Enter your first guess"))
+// const randomNumber = Math.random();
+// const targetnum = Math.floor(randomNumber * maximum) + 1;
+// console.log(targetnum);
 
+// let guess = prompt("Enter your first guess (Try 'q' to quit)")
+// let attempts = 1;
 
-while(guess !== targetnum){
-    if (guess > targetnum){
-        guess = parseInt(prompt('Too High! Enter a new guess:'))
-    }
-    else{
-        guess = parseInt(prompt('Too Low! Enter a new Guess:'))
-    }
+// while(parseInt(guess) !== targetnum){
+//     if (guess === 'q')break;
+//     guess = parseInt(guess)
+//     if (guess > targetnum){
+//         guess = prompt('Too High! Enter a new guess:')
+//         attempts++;
+//     }
+//     else if(guess < targetnum){
+//         guess = prompt('Too Low! Enter a new Guess:')
+//         attempts++;
+//     }
+
+//     else{
+//         guess = prompt("Invalid guess. please enter a number or 'q' to quit")
+//     }
+// }
+
+// if (guess === 'q'){
+//     console.log('Ok, You Quit')
+// } else {
+//     console.log('CONGRATS YOU WIN')
+// }
+
+// if (attempts  <= 1){
+//     console.log(`You Got it, it took you ${attempts} guess`)
+// } else {
+//     console.log(`You Got it, it took you ${attempts} guesses`)
+// }
+
+const subreddits = ['cringe', 'books', 'chickens', 'funny', 'pics', 'soccer']
+
+// for (let i = 0; i < subreddits.length; i++){
+//     console.log(`visit reddit.com/r/ ${subreddits[i]}`)
+// }
+
+for (let ayan of subreddits){
+    console.log(ayan)
 }
