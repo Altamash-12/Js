@@ -218,15 +218,33 @@
 
 // while (true) {
 //   input = prompt(input);
-
-//   if (input === "stop") {
-//     break;
-//   }
+//   if (input.toLowerCase() === "stop copying me") break;
 // }
-
+    
 // console.log("OK YOU WIN!");
 
 // for (let i = 1; i <= 1000; i += 2) {
 //   console.log(i);
 //   if (i === 100) break;
 // }
+
+let maximum = parseInt(prompt('Enter the maximum number'))
+while(!maximum){
+    maximum = parseInt(prompt('Enter a valid number!'))
+}
+const randomNumber = Math.random();
+console.log("randomNumber",randomNumber)
+const targetnum = Math.floor(randomNumber * maximum) + 1;
+console.log(targetnum);
+
+let guess = parseInt(prompt("Enter your first guess"))
+
+
+while(guess !== targetnum){
+    if (guess > targetnum){
+        guess = parseInt(prompt('Too High! Enter a new guess:'))
+    }
+    else{
+        guess = parseInt(prompt('Too Low! Enter a new Guess:'))
+    }
+}
