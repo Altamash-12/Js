@@ -302,6 +302,46 @@
 
 // console.log(total / scores.length)
 
-for (let ayan of 'Altamash'){
-    console.log(ayan)
+// for (let ayan of 'Altamash'){
+//     console.log(ayan)
+// }
+
+
+// TODO LIST
+// let input = prompt('What would you like to do?');
+// while (!input) {
+//     input = prompt('What would you like to do?');
+// }
+
+// if (input === 'new') {
+//     let work = prompt('Enter new todo');
+//     console.log(work);
+// }
+
+
+
+let input = prompt('What would you like to do?');
+
+const todos = ['collect chickens from eggs', 'clean litter box']
+
+while (input !== 'quit' && input !== 'q '){
+    if (input === "list"){
+        console.log('**********************')
+       for (let i = 0; i < todos.length; i++){
+        console.log(`$[i]: $[todos[i]]`)
+       }
+        console.log('**********************')
+        todos.push(list)
+    } else if (input === 'new'){
+        const newTodo = prompt('Ok, what is the new todo?')
+        todos.push(newTodo)
+        console.log(`${newTodo} added to the list!`)
+    } else if(input === 'delete'){
+        const index = prompt('Ok, Enter an index to delete:')
+        const deleted  = todos.splice(index, 1);
+        console.log(`ok, deleted ${deleted[0]}`)
+    }
+   input = prompt('What would you like to do?');
 }
+
+console.log('OK YOU QUIT THE APP')
