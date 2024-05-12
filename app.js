@@ -214,10 +214,10 @@
 
 // console.log("Right Password");
 
-// let input = prompt("Hey, Say Something!");
+// let input = prompt("Hey, Say Something!").toUpperCase();
 
 // while (true) {
-//   input = prompt(input);
+//   input = prompt(input).toUpperCase();
 //   if (input.toLowerCase() === "stop copying me") break;
 // }
 
@@ -233,8 +233,7 @@
 //   maximum = parseInt(prompt("Enter a valid number!"));
 // }
 
-// const randomNumber = Math.random();
-// const targetnum = Math.floor(randomNumber * maximum) + 1;
+// const targetnum = Math.floor(Math.random() * maximum) + 1;
 // console.log(targetnum);
 
 // let guess = prompt("Enter your first guess (Try 'q' to quit)");
@@ -260,50 +259,18 @@
 //   console.log("CONGRATS YOU WIN");
 // }
 
-// if (attempts <= 1) {
-//   console.log(`You Got it, it took you ${attempts} guess`);
+// if (attempts  <= 1){
+//     console.log(`You Got it, it took you ${attempts} guess`)
 // } else {
 //   console.log(`You Got it, it took you ${attempts} guesses`);
 // }
 
 const subreddits = ["cringe", "books", "chickens", "funny", "pics", "soccer"];
 
-subreddits[2];
-
-// for (let i = 0; i < subreddits.length; i++) {
-//   console.log(`visit reddit.com/r/ ${subreddits[i]}`);
+// for (let i = 0; i < subreddits.length; i++){
+//     console.log(`visit reddit.com/r/ ${subreddits[i]}`)
 // }
 
-// for (let ayan of subreddits) {
-//   console.log(ayan);
-// }
-
-// const seatingchair = [
-//   ["Harry", "Ayan", "Akram"],
-//   ["ajmal", "kalim", "abid", "farhan"],
-//   ["hamza", "rehan", "kamran"],
-// ];
-
-// let name = ["ayan", "altamash", "akram", "ajmal", "kalim"];
-
-// for (let i = 0; i < seatingchair.length; i++) {
-//   const row = seatingchair[i];
-//   console.log(`Row is #${i + 1}`);
-//   for (let j = 0; j < row.length; j++) {
-//     console.log(row[j]);
-//   }
-// }
-
-// for (let row of seatingchair) {
-//   for (let student of row) {
-//     console.log(student);
-//   }
-// }
-
-// let name = "Al tam ash";
-
-// console.log(name.split("").join("t"));
-
-// for (let ayan of "Altamash") {
-//   console.log(ayan);
-// }
+for (let ayan of subreddits) {
+  console.log(ayan);
+}
