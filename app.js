@@ -220,7 +220,7 @@
 //   input = prompt(input).toUpperCase();
 //   if (input.toLowerCase() === "stop copying me") break;
 // }
-    
+
 // console.log("OK YOU WIN!");
 
 // for (let i = 1; i <= 1000; i += 2) {
@@ -271,14 +271,13 @@
 // const subreddits = ['cringe', 'books', 'chickens', 'funny', 'pics', 'soccer']
 
 // for (let i = 0; i < subreddits.length; i++){
-    
+
 //         console.log(`visit reddit.com/r/ ${subreddits[i]}`)
 //     }
 
 // for (let ayan of subreddits){
 //     console.log(ayan)
 // }
-
 
 // const score = {
 //     English: 85,
@@ -306,7 +305,6 @@
 //     console.log(ayan)
 // }
 
-
 // TODO LIST
 // let input = prompt('What would you like to do?');
 // while (!input) {
@@ -318,30 +316,32 @@
 //     console.log(work);
 // }
 
+let input = prompt("What would you like to do?");
 
+const todos = ["collect chickens from eggs", "clean litter box"];
 
-let input = prompt('What would you like to do?');
-
-const todos = ['collect chickens from eggs', 'clean litter box']
-
-while (input !== 'quit' && input !== 'q '){
-    if (input === "list"){
-        console.log('**********************')
-       for (let i = 0; i < todos.length; i++){
-        console.log(`$[i]: $[todos[i]]`)
-       }
-        console.log('**********************')
-        todos.push(list)
-    } else if (input === 'new'){
-        const newTodo = prompt('Ok, what is the new todo?')
-        todos.push(newTodo)
-        console.log(`${newTodo} added to the list!`)
-    } else if(input === 'delete'){
-        const index = prompt('Ok, Enter an index to delete:')
-        const deleted  = todos.splice(index, 1);
-        console.log(`ok, deleted ${deleted[0]}`)
+while (input !== "quit" && input !== "q ") {
+  if (input === "list") {
+    console.log("**********************");
+    for (let i = 0; i < todos.length; i++) {
+      console.log(`$[i]: $[todos[i]]`);
     }
-   input = prompt('What would you like to do?');
+    console.log("**********************");
+    todos.push(list);
+  } else if (input === "new") {
+    const newTodo = prompt("Ok, what is the new todo?");
+    todos.push(newTodo);
+    console.log(`${newTodo} added to the list!`);
+  } else if (input === "delete") {
+    const index = parseInt(prompt("Ok, Enter an index to delete:"));
+    if (!Number.isNaN(index)) {
+      const deleted = todos.splice(index, 1);
+      console.log(`ok, deleted ${deleted[0]}`);
+    } else {
+      console.log("Unknown index");
+    }
+  }
+  input = prompt("What would you like to do?");
 }
 
-console.log('OK YOU QUIT THE APP')
+console.log("OK YOU QUIT THE APP");
