@@ -320,14 +320,14 @@ let input = prompt("What would you like to do?");
 
 const todos = ["collect chickens from eggs", "clean litter box"];
 
-while (input !== "quit" && input !== "q ") {
+while (input !== "quit" && input !== "q") {
   if (input === "list") {
     console.log("**********************");
     for (let i = 0; i < todos.length; i++) {
-      console.log(`$[i]: $[todos[i]]`);
+      console.log(i, todos[i]);
     }
     console.log("**********************");
-    todos.push(list);
+    // todos.push(list);
   } else if (input === "new") {
     const newTodo = prompt("Ok, what is the new todo?");
     todos.push(newTodo);
