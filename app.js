@@ -358,9 +358,9 @@ const subreddits = ["cringe", "books", "chickens", "funny", "pics", "soccer"];
 //   console.log("MI")
 // }
 
-function greet(firstName){
-  console.log(`firstName is: ${firstName} `)
-}
+// function greet(firstName){
+//   console.log(`firstName is: ${firstName} `)
+// }
 
 function rant(message){
   console.log(message.toUpperCase());
@@ -368,13 +368,13 @@ function rant(message){
   console.log(message.toUpperCase());
 }
 
-function isShortsWeather(temperature){
-  if (temperature >= 75){
-    return true
-  } else{
-    return false
-  }
-}
+// function isShortsWeather(temperature){
+//   if (temperature >= 75){
+//     return true
+//   } else{
+//     return false
+//   }
+// }
 
 // function lastElement(num){
 // return num[num.length-1];
@@ -519,7 +519,446 @@ function isShortsWeather(temperature){
 // }
 
 
-function capitalize(text){
-  let capital = text [0].toUpperCase();
-  return capital+text.splice(1);
+// function capitalize(text){
+//   let capital = text [0].toUpperCase();
+//   return capital+text.splice(1);
+// }
+
+// **************
+// HIGH ORDER FUNCTION
+// **************
+
+// function callTwice(func){
+//     func();
+//     func();
+// }
+
+// function callTenTimes(f){
+//   for (let i = 0; i < 10; i++){
+//     f()
+//   }
+// }
+
+// function rollDie(){
+//   const roll = Math.floor(Math.random() * 6) + 1
+//   console.log(roll)
+// }
+
+// callTwice(rollDie)
+
+
+
+// ************
+// RETURNING FUNCTION
+// ************
+
+// function makeMysteryFunc(){
+//   const rand = Math.random()
+//   if (rand > 0.5){
+//     return function (){
+//       console.log('CONGRATS, I AM A GOOD FUNCTION')
+//       console.log('YOU WIN  A MILLION DOLLARS')
+//     } 
+//   }
+//   else {
+//     return function() {
+//       alert("Your number is less than 0.5")
+//       alert("Try Again!!!!")
+//       alert("Try Again!!!!")
+//       alert("Try Again!!!!")
+//     }
+//   }
+// }
+
+// function isBetween(num){
+//   return num >= 50 && num <= 100
+// }
+
+// function isBetween2(num){
+//   return num >= 1 && num <= 10
+// }
+
+
+// function makeBetweenFunc(min, max){
+//   return function(num){
+//     return num >= min && num <= max
+//   }
+// }
+
+// const isChild = makeBetweenFunc(0,18)
+// const isAdult = makeBetweenFunc(19,64)
+// const isSenior = makeBetweenFunc(65,120)
+
+
+// ***********
+// METHOD
+
+const mathBasics = {
+  pi: 3.14159,
+  square(num){
+    return num*num
+  },
+  cube(num){
+    return num ** 3
+  }
+}
+
+const square = {
+  area(length){
+    return length * length
+  },
+  perimeter(length){
+    return 4 * length
+  }
+}
+
+// *********
+// THIS 
+// const cat = {
+//   name: 'Blue Steele',
+//   color: 'Grey',
+//   breed: 'Scottish fold',
+//   meow(){
+//     console.log(`${this.name} says my color is grey and i'm a scottish breede`)
+//   }
+// }
+
+// const meow2 = cat.meow
+
+
+// TRY AND CATCH
+
+// function yell(msg){
+//   console.log(msg.toUpperCase())
+// }
+
+// function yell(msg){
+//   try{
+//   console.log(msg.toUpperCase())
+//   } catch (e){
+
+//     console.log(e,"Please pass a string next time!")
+//   }
+// }
+
+
+
+// let hen = {
+//   name: 'Helen',
+//   eggCount: 0,
+//   layAnEgg(){
+//       this.eggCount = this.eggCount+1;
+//       return "EGG";
+//   }
+// };
+
+
+// const numbers = [11, 22, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+// for(let i = 0; i <= numbers.length; i++){
+//   console.log(i)
+// }
+
+// for (let num in numbers){
+//   console.log(numbers[num])
+// }
+
+// for (let num of numbers){
+//   console.log(num)
+// }
+
+
+
+// function print(element){
+//   console.log(element)
+// }
+
+// numbers.forEach(print)
+
+// numbers.forEach(function (element){
+//   console.log(element)
+// })
+
+// numbers.forEach(function (element){
+//   if (element % 2 === 0){
+//     console.log(element)
+//   }
+// })
+
+
+// const movies = [
+//   {
+//     title: 'Amadeus',
+//     score: 99
+//   }, 
+
+//   {
+//     title: 'stand by me',
+//     score: 85
+//   }, 
+
+//   {
+//     title: 'parasite',
+//     score: 95
+//   },
+
+//   {
+//     title: 'Alien',
+//     score: 90
+//   }
+// ]
+
+// const titles = movies.map(function (movie){
+//   return movie.title.toUpperCase()
+// })
+
+// console.log(titles);
+
+// const ayan = movies.map(function (movie){
+//   return `${movie.title} - ${movie.score / 10}`
+// })
+
+
+// function movie(name){
+//   console.log(name)
+// }
+
+// movies.forEach(movie)
+
+
+// movies.forEach(function (name){
+//   console.log(`${name.title} - ${name.score} / 100`)
+// })
+
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+// const doubles = numbers.map(function (num){
+//   return num * 2
+// })x
+
+// const add = (x,y) => {
+//   return x + y
+// }
+
+// const rollDie = () => {
+//   return Math.floor(Math.random() * 6) + 1
+// }
+
+// const rollDie = () => (
+//    Math.floor(Math.random() * 6) + 1
+// )
+
+
+// const marks = movies.map(movie => {
+//   return `${movie.title} - ${movie.score / 10}`
+// })
+
+// setTIMEOUT AND setINTERVAL
+
+// console.log("Hello!!!")
+// setTimeout(() => {
+//   console.log("Are you still there?")
+// },3000)
+
+// console.log("Goodbye")
+
+
+// setInterval(() => {
+//   console.log(Math.floor(Math.random() * 6))
+// },2000)
+
+// const id = setInterval(() => {
+//   console.log(Math.floor(Math.random() * 6))
+// },2000)
+
+
+// FILTER
+
+// const numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+// numbers.filter(n => {
+//   return n < 10
+// })
+
+// const movies = [
+//   {
+//     title: 'Amadeus',
+//     score: 100,
+//     year: 1984
+//   }, 
+
+//   {
+//     title: 'Sharkando',
+//     score: 85,
+//     year:2013
+//   }, 
+
+//   {
+//     title: 'parasite',
+//     score: 55,
+//     year: 2023
+//   },
+
+//   {
+//     title: 'Alien',
+//     score: 20,
+//     year: 2001
+//   },
+
+//   {
+//     title: 'parjawanasite',
+//     score: 85,
+//     year: 2023
+//   },
+
+//   {
+//     title: 'pathanb',
+//     score: 90,
+//     year: 2024
+//   },
+
+//   {
+//     title: 'koi mil gaya',
+//     score: 100,
+//     year: 2012
+//   },
+// ]
+
+// const goodMovies = movies.filter(m => m.score > 80)
+// const badMovies = movies.filter(m => m.score < 80)
+
+// const recentMovies = movies.filter(m => m.year > 2015)
+
+// const hitMovies = movies.filter(m => m.score > 80).map(m => m.title)
+
+
+// const validUserNames = (userName => (
+//    validUserNames.length < 10
+// ))
+
+// const validUserNames = (usernames) => {
+//   let filteredUsername = usernames.filter((username) => username.length < 10);
+// }
+
+// console.log("Hello Ayan")
+
+// setTimeout(() => {
+//   console.log("Ayan are you there ?")
+// }, 3000)
+
+// let sum = (num1, num2) => {
+//   return num1 + num2;
+// };
+
+// setInterval(() => {
+//   let randomNum = Math.ceil(Math.random() * 9) + 1
+//   let result = sum(randomNum, 2); 
+//   console.log(result);
+// }, 2000);
+
+// ***************
+// SOME AND EVERY
+
+// const exams = [80, 98, 78, 60, 95, 20]
+// let results = exams.every(score => score >= 50)
+// let result = exams.some(score => score >= 50)
+
+
+// *******************\
+// REDUCE AND THIS
+const prices = [25, 120, 80, 10, 50, 30]
+
+// let total = 0;
+// for (let price of prices){
+//   total += price
+// }
+// console.log(total)
+
+// const total = prices.reduce((total, price) => total + price)
+
+// const minPrice = prices.reduce((min, price) =>{
+//   if(min > price){
+//     return min
+//   } return price
+// })
+
+
+const movies = [
+  {
+    title: 'Amadeus',
+    score: 100,
+    year: 1984
+  }, 
+
+  {
+    title: 'Sharkando',
+    score: 85,
+    year:2013
+  }, 
+
+  {
+    title: 'parasite',
+    score: 55,
+    year: 2023
+  },
+
+  {
+    title: 'Alien',
+    score: 20,
+    year: 2001
+  },
+
+  {
+    title: 'parjawanasite',
+    score: 85,
+    year: 2023
+  },
+
+  {
+    title: 'pathanb',
+    score: 90,
+    year: 2024
+  },
+
+  {
+    title: 'koi mil gaya',
+    score: 101,
+    year: 2012
+  },
+]
+
+const highRated = movies.reduce((bestMovie, currMovie) =>{
+  if (currMovie.score > bestMovie.score){
+    return currMovie
+  } return bestMovie 
+})
+
+// const evens = [2, 4, 6, 8];
+// evens.reduce((sum, num) => sum + num, 100)
+
+
+
+// const person = {
+//   firstName: 'Khan',
+//   lastName: 'Altamash',
+//   fullName:  () =>{
+//     return `${this.firstName} ${this.lastName}`
+//   },
+//   shoutName: function (){
+//     setTimeout(() => {
+//       console.log(this)
+//     })
+//   }
+// }
+
+
+// *******************
+// NEWER JAVASCRIPT FEATURES
+
+function rollDie(numSides){
+  if(numSides === undefined){
+    numSides = 6
+  }
+  return Math.floor(Math.random() * numSides) + 1
 }
